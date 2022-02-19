@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(83, 82, 82);
+    flex-direction: row;
+}
+
+li{
+    float: left;
+}
+
+li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif
+}
+
+li a:hover {
+    background-color: #111;
+}
+#f{
+    grid-area: f;
+    text-align: center;
+    font-size: 10px;
+}
+
+#footerCyT{
+    grid-area: footerCyT;
+    font-size: 10px;
+}
+
+#footerContacto{
+    grid-area: footerContacto;
+    font-size: 10px;
+}
+
+/*
+footer{
+    background: linear-gradient(to bottom, rgb(196, 191, 191), white);
+    width: 100%;
+    height: 100%;
+}
+
+footer div p{
+    margin: 0px;
+    padding-top: 15px;
+    padding-left: 150px;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+
+}
+footer div {
+    display: block;
+    text-align: left;
+}
+
+footer a{
+    display: block;
+    text-align: right;
+    padding-bottom: 30px;
+}*/
+
+.titulares{
+    text-align: center;
+    align-self: center;
+    font-size: 2.5vw;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.centrar-fotos{
+    text-align: center;
+}
+
+.formulario {
+    font-family: 'Oswald', sans-serif;
+    font-size: 25px;
+}
+#titleHome{
+    grid-area: h; 
+}
+
+#img1{
+    grid-area: m1;
+}
+
+#img2{
+    grid-area: m2;
+}
+
+#img3{
+    grid-area: m3;
+}
+
+
+#cine1{
+    grid-area: cine1;
+    background: linear-gradient(to bottom, rgb(201, 201, 201), rgb(63, 62, 63));
+}
+
+#cine2{
+    grid-area: cine2;
+    background: linear-gradient(to bottom, rgb(201, 201, 201), rgb(63, 62, 63));
+}
+
+
+#cine3{
+    grid-area: cine3;
+    background: linear-gradient(to bottom, rgb(201, 201, 201), rgb(63, 62, 63));
+}
+
+#cine4{
+    grid-area: cine4;
+    background: linear-gradient(to bottom, rgb(201, 201, 201), rgb(63, 62, 63));
+}
+
+#cine5{
+    grid-area: cine5;
+    background: linear-gradient(to bottom, rgb(201, 201, 201), rgb(63, 62, 63));
+}
+
+#cine6{
+    grid-area: cine6;
+    background: linear-gradient(to bottom, rgb(201, 201, 201), rgb(63, 62, 63));
+}
+
+#cine7{
+    grid-area: cine7;
+    background: linear-gradient(to bottom, rgb(201, 201, 201), rgb(63, 62, 63));
+}
+
+#teatro1{
+    grid-area: teatro1;
+    background: linear-gradient(to bottom, rgb(201, 201, 201), rgb(63, 62, 63));
+}
+
+#teatro2{
+    grid-area: teatro2;
+    background: linear-gradient(to bottom, rgb(201, 201, 201), rgb(63, 62, 63));
+}
+
+#teatro3{
+    grid-area: teatro3;
+    background: linear-gradient(to bottom, rgb(201, 201, 201), rgb(63, 62, 63));
+}
+
+#teatro4{
+    grid-area: teatro4;
+    background: linear-gradient(to bottom, rgb(201, 201, 201), rgb(63, 62, 63));
+}
+
+.cine{
+    display: flex;
+    height: 350px;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 30px;
+}
+
+.cine img{
+    width: 18%;
+    height: 100%;
+}
+
+/*moviles*/
+
+@media screen and (max-width: 440px) {
+
+    /*home page*/
+    .gridHomePage {
+        display: grid;   
+        grid-template-columns: 100%;
+        grid-template-rows: 100px 700px 700px 700px 100px;
+        grid-template-areas: "h" "m1" "m2" "m3" "f";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    header{
+        height: auto;
+    }
+
+    ul{
+        flex-direction: column;
+    }
+
+    li{
+        float: none;
+    }
+
+    /*cine y teatros*/
+    
+    #cinesYteatros{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows:100px 1700px 1700px 1700px 1700px 1700px 1700px 1700px 1700px 1700px 1700px 1700px 100px;
+        grid-template-areas: "titleCine" 
+                            "cine1"
+                            "cine2"
+                            "cine3"
+                            "cine4"
+                            "cine5"
+                            "cine6"
+                            "cine7"
+                            "teatro1"
+                            "teatro2"
+                            "teatro3"
+                            "teatro4"
+                            "footerCyT";
+        row-gap: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        text-align: center;
+        font-size: 40px;
+        justify-items: center;
+        align-items: center;
+        justify-content: space-around;
+        background: rgb(201, 201, 201);
+    }
+
+    .cine{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cine img{
+        width: 80%;
+        height: 100%;
+        padding-bottom: 10px;
+    }
+
+    /*contacto*/
+    #contactoGrid{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100px 300px 100px;
+        grid-template-areas:    "titloContacto"
+                                "formulario"
+                                "footerContacto";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+/*pantallas medias*/
+
+@media only screen and ( min-width:441px){
+
+    /*home page*/
+
+    .gridHomePage{
+        display: grid;
+        grid-template-columns: 100% ;
+        grid-template-rows: 100px 700px 700px 700px 100px;
+        grid-template-areas: "h" "m1" "m2" "m3" "f";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-around;
+        row-gap: 10px;
+    }
+
+    /*cine y teatros*/
+
+    #cinesYteatros{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows:100px 1300px 1300px 1300px 1300px 1300px 1300px 1300px 1300px 1300px 1300px 1300px 100px;
+        grid-template-areas:"titleCine" 
+                            "cine1"
+                            "cine2"
+                            "cine3"
+                            "cine4"
+                            "cine5"
+                            "cine6"
+                            "cine7"
+                            "teatro1"
+                            "teatro2"
+                            "teatro3"
+                            "teatro4"
+                            "footerCyT";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        text-align: center;
+        font-size: 40px;
+        background: rgb(201, 201, 201);
+    }
+
+    #tituloCineYTeatros{
+        grid-area: titleCine;
+    }
+
+    .cine{
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .cine img{
+        width: 30%;
+        height: 100%;
+        margin: 20px;
+    }
+
+    /*contacto*/
+
+    #contactoGrid{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100px 450px 100px;
+        grid-template-areas:    "titloContacto"
+                                "formulario"
+                                "footerContacto";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+/*tamanio medio*/
+@media only screen and ( min-width:500px){
+
+    /*cine y teatros*/
+
+    #cinesYteatros{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows:100px 900px 900px 900px 900px 900px 900px 900px 900px 900px 900px 900px 100px;
+        grid-template-areas:"titleCine" 
+                            "cine1"
+                            "cine2"
+                            "cine3"
+                            "cine4"
+                            "cine5"
+                            "cine6"
+                            "cine7"
+                            "teatro1"
+                            "teatro2"
+                            "teatro3"
+                            "teatro4"
+                            "footerCyT";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        text-align: center;
+        font-size: 40px;
+        background: rgb(201, 201, 201);
+    }
+}
+
+@media only screen and ( min-width:600px){
+
+    /*cine y teatros*/
+
+    #cinesYteatros{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows:100px 1100px 1100px 1100px 1100px 1100px 1100px 1100px 900px 900px 900px 900px 100px;
+        grid-template-areas:"titleCine" 
+                            "cine1"
+                            "cine2"
+                            "cine3"
+                            "cine4"
+                            "cine5"
+                            "cine6"
+                            "cine7"
+                            "teatro1"
+                            "teatro2"
+                            "teatro3"
+                            "teatro4"
+                            "footerCyT";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        text-align: center;
+        font-size: 40px;
+        background: rgb(201, 201, 201);
+    }
+
+    #contactoGrid{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100px 450px 100px;
+        grid-template-areas:    "titloContacto"
+                                "formulario"
+                                "footerContacto";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+@media only screen and ( min-width:700px){
+
+    /*cine y teatros*/
+
+    #cinesYteatros{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows:100px 1600px 1600px 1600px 1600px 1600px 1600px 1600px 900px 900px 900px 900px 100px;
+        grid-template-areas:"titleCine" 
+                            "cine1"
+                            "cine2"
+                            "cine3"
+                            "cine4"
+                            "cine5"
+                            "cine6"
+                            "cine7"
+                            "teatro1"
+                            "teatro2"
+                            "teatro3"
+                            "teatro4"
+                            "footerCyT";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        text-align: center;
+        font-size: 40px;
+        background: rgb(201, 201, 201);
+    }
+}
+
+/*pantallas grandes*/
+
+@media only screen and ( min-width: 992px){
+
+    /*home page*/
+
+    .gridHomePage {
+        display: grid;   
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 100px 700px 100px;
+        grid-template-areas: "h h h" "m1 m2 m3" "f f f";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-around;
+        row-gap: 10px;
+    }
+
+    #img1 img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    
+    /*pagina cine y teatros*/
+
+    #cinesYteatros{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows:150px 600px 600px 600px 600px 600px 600px 600px 500px 500px 500px 500px 100px;
+        grid-template-areas:"titleCine" 
+                            "cine1"
+                            "cine2"
+                            "cine3"
+                            "cine4"
+                            "cine5"
+                            "cine6"
+                            "cine7"
+                            "teatro1"
+                            "teatro2"
+                            "teatro3"
+                            "teatro4"
+                            "footerCyT";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size: 40px;
+        background: rgb(201, 201, 201);
+    }
+
+    #tituloCineYTeatros{
+        grid-area: titleCine;
+    }
+
+    .cine{
+        display: flex;
+        flex-wrap: nowrap;
+        height: 100%;
+        width: 100%;
+        flex-direction: row;
+        padding-bottom: 30px;
+    }
+
+    #contactoGrid{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100px 500px 100px;
+        grid-template-areas:    "titloContacto"
+                                "formulario"
+                                "footerContacto";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #galeriaGrid{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100px 1700px 100px;
+        grid-template-areas:    "tituloGaleria"
+                                "Galeria"
+                                "footerGaleria";
+        justify-items: center;
+        align-items: center;
+        background-color: silver;
+    }
+    div iframe{
+        width: 900px;
+    }
+}
+
+.ZoomImg{
+    transform: scale(1, 1);
+    transition: .5s;
+}
+.ZoomImg:hover{
+    transform: scale(1.05, 1.05);
+    transition: .5s;
+}
+@keyframes animacionZoom{
+
+}
