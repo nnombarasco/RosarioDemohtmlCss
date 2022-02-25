@@ -16,6 +16,7 @@ ul {
     overflow: hidden;
     background-color: rgb(83, 82, 82);
     flex-direction: row;
+    width: 100%;
 }
 
 li{
@@ -33,7 +34,30 @@ li a {
 
 li a:hover {
     background-color: #111;
+    color: white;
 }
+
+.navbar-collapse{
+    z-index: 100;
+}
+
+.container-fluid{
+    padding: 0%;
+    background-color: rgb(83, 82, 82);
+    height: 52px;
+}
+
+.container-fluid button{
+    padding: 0%;
+    background-color: silver;
+    height: 42px;
+    width: 55px;
+}
+
+.navbar{
+    padding: 0% 0%;
+}
+
 #f{
     grid-area: f;
     text-align: center;
@@ -47,6 +71,18 @@ li a:hover {
 
 #footerContacto{
     grid-area: footerContacto;
+    font-size: 10px;
+}
+
+#footerGaleria{
+    display: grid !important;
+    grid-area: footerGaleria !important;
+    font-size: 10px;
+}
+
+#footerParques{
+    display: grid !important;
+    grid-area: footerParques !important;
     font-size: 10px;
 }
 
@@ -78,10 +114,11 @@ footer a{
 }*/
 
 .titulares{
-    text-align: center;
-    align-self: center;
-    font-size: 2.5vw;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    text-align: center !important;
+    align-self: center !important;
+    width: 90%;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;
 }
 
 .centrar-fotos{
@@ -92,19 +129,35 @@ footer a{
     font-family: 'Oswald', sans-serif;
     font-size: 25px;
 }
-#titleHome{
-    grid-area: h; 
+
+
+#titleHome{ 
+    grid-area: h;
 }
 
-#img1{
+#titleHome h1{ 
+    font-size: 6vw;
+}
+
+#tituloGaleria{
+    grid-area: tituloGaleria;
+    font-size: 6vw;
+}
+
+#tituloParques{
+    grid-area: tituloParques;
+    font-size: 6vw;
+}
+
+#m1{
     grid-area: m1;
 }
 
-#img2{
+#m2{
     grid-area: m2;
 }
 
-#img3{
+#m3{
     grid-area: m3;
 }
 
@@ -165,6 +218,21 @@ footer a{
     background: linear-gradient(to bottom, rgb(201, 201, 201), rgb(63, 62, 63));
 }
 
+#galeria{
+    grid-area: Galeria !important;
+    width: 800px;
+    height: 100%;
+}
+
+.w-100{
+    height: 600px !important;
+    width: 800px !important;
+}
+
+#carouselExampleIndicators2{
+    margin-top: 5%;
+}
+
 .cine{
     display: flex;
     height: 350px;
@@ -184,7 +252,7 @@ footer a{
 @media screen and (max-width: 440px) {
 
     /*home page*/
-    .gridHomePage {
+    #gridHomePage {
         display: grid;   
         grid-template-columns: 100%;
         grid-template-rows: 100px 700px 700px 700px 100px;
@@ -262,15 +330,52 @@ footer a{
         align-items: center;
         justify-content: space-around;
     }
+
+    /*galeria*/
+
+    #galeriaGrid{
+        display: flex;
+        flex-direction: column;
+        justify-items: center !important;
+        align-items: center !important;
+        justify-content: space-between!important;
+        font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+        background: rgb(201, 201, 201)!important;
+    }
+
+    #galeria{
+        grid-area: Galeria !important;
+        width: 300px;
+        height: 500px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .w-100{
+        height: 200px !important;
+        width: 300px !important;
+    }
 }
 
 /*pantallas medias*/
 
-@media only screen and ( min-width:441px){
+@media only screen and ( min-width:441px) and ( max-width:576px){
+    header{
+        height: auto;
+    }
 
+    ul{
+        flex-direction: column;
+    }
+
+    li{
+        float: none;
+    }
     /*home page*/
 
-    .gridHomePage{
+    #gridHomePage{
         display: grid;
         grid-template-columns: 100% ;
         grid-template-rows: 100px 700px 700px 700px 100px;
@@ -342,6 +447,36 @@ footer a{
         align-items: center;
         justify-content: space-around;
     }
+
+    /*galeria*/
+
+    #galeriaGrid{
+        display: grid !important;
+        grid-template-columns: 100% !important;
+        grid-template-rows: 150px 700px 100px !important;
+        grid-template-areas:    "tituloGaleria"
+                                "Galeria"
+                                "footerGaleria" !important;
+                                
+        justify-items: center !important;
+        align-items: center !important;
+        justify-content: space-between!important;
+        font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+        background: rgb(201, 201, 201)!important;
+    }
+
+    #galeria{
+        grid-area: Galeria !important;
+        width: 400px;
+        height: 100%;
+    }
+    
+    .w-100{
+        height: 300px !important;
+        width: 400px !important;
+    }
+
+
 }
 
 /*tamanio medio*/
@@ -379,6 +514,18 @@ footer a{
 }
 
 @media only screen and ( min-width:600px){
+    /*home page*/
+
+    #gridHomePage{
+        display: grid;
+        grid-template-columns: 100% ;
+        grid-template-rows: 100px 700px 700px 700px 100px;
+        grid-template-areas: "h" "m1" "m2" "m3" "f";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-around;
+        row-gap: 10px;
+    }
 
     /*cine y teatros*/
 
@@ -425,12 +572,23 @@ footer a{
 
 @media only screen and ( min-width:700px){
 
+    /*home page*/
+    #gridHomePage {
+        display: grid;   
+        grid-template-columns: 30% 30% 30%;
+        grid-template-rows: 150px 750px 100px;
+        grid-template-areas: "h h h" "m1 m2 m3" "f f f";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     /*cine y teatros*/
 
     #cinesYteatros{
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows:100px 1600px 1600px 1600px 1600px 1600px 1600px 1600px 900px 900px 900px 900px 100px;
+        grid-template-rows:100px 600px 600px 600px 600px 600px 600px 600px 900px 900px 900px 900px 100px;
         grid-template-areas:"titleCine" 
                             "cine1"
                             "cine2"
@@ -454,6 +612,34 @@ footer a{
         font-size: 40px;
         background: rgb(201, 201, 201);
     }
+
+    /*galeria*/
+
+    #galeriaGrid{
+        display: grid !important;
+        grid-template-columns: 100% !important;
+        grid-template-rows: 150px 1100px 100px !important;
+        grid-template-areas:    "tituloGaleria"
+                                "Galeria"
+                                "footerGaleria" !important;
+                                
+        justify-items: center !important;
+        align-items: center !important;
+        justify-content: space-between!important;
+        font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+        background: rgb(201, 201, 201)!important;
+    }
+
+    #galeria{
+        grid-area: Galeria !important;
+        width: 600px;
+        height: 100%;
+    }
+    
+    .w-100{
+        height: 500px !important;
+        width: 600px !important;
+    }
 }
 
 /*pantallas grandes*/
@@ -462,15 +648,14 @@ footer a{
 
     /*home page*/
 
-    .gridHomePage {
+    #gridHomePage {
         display: grid;   
         grid-template-columns: 33% 33% 33%;
-        grid-template-rows: 100px 700px 100px;
+        grid-template-rows: 150px 750px 100px;
         grid-template-areas: "h h h" "m1 m2 m3" "f f f";
         justify-items: center;
         align-items: center;
-        justify-content: space-around;
-        row-gap: 10px;
+        justify-content: space-between;
     }
 
     #img1 img{
@@ -510,6 +695,7 @@ footer a{
 
     #tituloCineYTeatros{
         grid-area: titleCine;
+        font-size: 6vw;
     }
 
     .cine{
@@ -534,19 +720,77 @@ footer a{
     }
 
     #galeriaGrid{
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: 100px 1700px 100px;
+        display: grid !important;
+        grid-template-columns: 100% !important;
+        grid-template-rows: 150px 1100px 100px !important;
         grid-template-areas:    "tituloGaleria"
                                 "Galeria"
-                                "footerGaleria";
-        justify-items: center;
-        align-items: center;
-        background-color: silver;
+                                "footerGaleria" !important;
+                                
+        justify-items: center !important;
+        align-items: center !important;
+        justify-content: space-between!important;
+        font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+        background: rgb(201, 201, 201)!important;
     }
-    div iframe{
-        width: 900px;
+
+    #galeria{
+        grid-area: Galeria !important;
+        width: 800px;
+        height: 100%;
     }
+    
+    .w-100{
+        height: 500px !important;
+        width: 800px !important;
+    }
+
+        
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(83, 82, 82);
+        flex-direction: row;
+        width: 100%;
+    }
+
+    li{
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: 'Times New Roman', Times, serif
+    }
+
+    li a:hover {
+        background-color: #111;
+        color: white;
+    }
+
+    /*parques*/
+
+    #parquesGrid{
+        display: grid !important;
+        grid-template-columns: 100% !important;
+        grid-template-rows: 150px 900px 100px !important;
+        grid-template-areas:    "tituloParques"
+                                "Parques"
+                                "footerParques" !important;
+                                
+        justify-items: center !important;
+        align-items: center !important;
+        justify-content: space-between!important;
+        font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+        background: rgb(201, 201, 201)!important;
+    }
+
 }
 
 .ZoomImg{
