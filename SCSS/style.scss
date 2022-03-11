@@ -220,10 +220,15 @@ li{
     }
 }
 
-
 /*moviles*/
 
 @media screen and (max-width: 440px) {
+
+    .propiedadesGrid{
+        justify-items: center;
+        align-items: center;
+        justify-content: space-around;
+    }
 
     /*home page*/
     #gridHomePage {
@@ -231,9 +236,7 @@ li{
         grid-template-columns: 100%;
         grid-template-rows: 100px 700px 700px 700px 100px;
         grid-template-areas: "h" "m1" "m2" "m3" "f";
-        justify-items: center;
-        align-items: center;
-        justify-content: space-around;
+        @extend .propiedadesGrid;
     }
 
     header{
@@ -272,10 +275,8 @@ li{
         font-weight: bold;
         text-align: center;
         font-size: 40px;
-        justify-items: center;
-        align-items: center;
-        justify-content: space-around;
         background: rgb(201, 201, 201);
+        @extend .propiedadesGrid;
     }
 
     .cine{
@@ -301,9 +302,7 @@ li{
         grid-template-areas:    "titloContacto"
                                 "formulario"
                                 "footerContacto";
-        justify-items: center;
-        align-items: center;
-        justify-content: space-around;
+        @extend .propiedadesGrid;
     }
 
     /*galeria*/
@@ -337,6 +336,7 @@ li{
 /*pantallas medias*/
 
 @media only screen and ( min-width:441px) and ( max-width:576px){
+
     header{
         height: auto;
     }
@@ -366,7 +366,7 @@ li{
     #cinesYteatros{
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows:100px 1300px 1300px 1300px 1300px 1300px 1300px 1300px 1300px 1300px 1300px 1300px 100px;
+        grid-template-rows:100px 1000px 1000px 1000px 1000px 1000px 1000px 1000px 1300px 1300px 1300px 1300px 100px;
         grid-template-areas:"titleCine" 
                             "cine1"
                             "cine2"
@@ -531,6 +531,20 @@ li{
         background: rgb(201, 201, 201);
     }
 
+    .cine{
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+        flex-direction: row;
+
+        img{
+        width: 30%;
+        height: 60%;
+        margin: 20px;
+        }
+    }
+
     #contactoGrid{
         display: grid;
         grid-template-columns: 100%;
@@ -562,7 +576,7 @@ li{
     #cinesYteatros{
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows:100px 600px 600px 600px 600px 600px 600px 600px 900px 900px 900px 900px 100px;
+        grid-template-rows:100px 900px 900px 900px 900px 900px 900px 900px 900px 900px 900px 900px 100px;
         grid-template-areas:"titleCine" 
                             "cine1"
                             "cine2"
@@ -585,6 +599,20 @@ li{
         text-align: center;
         font-size: 40px;
         background: rgb(201, 201, 201);
+    }
+
+    .cine{
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+        flex-direction: row;
+
+        img{
+        width: 25%;
+        height: 50%;
+        margin: 20px;
+        }
     }
 
     /*galeria*/
@@ -622,6 +650,11 @@ li{
 
     /*home page*/
 
+    @mixin tamanioContenedor($ancho,$largo) {
+        width: $ancho;
+        height: $largo;
+    }
+
     #gridHomePage {
         display: grid;   
         grid-template-columns: 33% 33% 33%;
@@ -633,8 +666,7 @@ li{
     }
 
     #img1 img{
-        width: 100%;
-        height: 100%;
+        @include tamanioContenedor(100%, 100%);
         object-fit: contain;
     }
     
@@ -673,12 +705,16 @@ li{
     }
 
     .cine{
+        @include tamanioContenedor(100%, 100%);
         display: flex;
         flex-wrap: nowrap;
-        height: 100%;
-        width: 100%;
         flex-direction: row;
         padding-bottom: 30px;
+
+        img{
+        @include tamanioContenedor(14%, 50%);
+        margin: 20px;
+        }
     }
 
     #contactoGrid{
@@ -710,8 +746,7 @@ li{
 
     #galeria{
         grid-area: Galeria !important;
-        width: 800px;
-        height: 100%;
+        @include tamanioContenedor(800px, 100%);
     }
     
     .w-100{
