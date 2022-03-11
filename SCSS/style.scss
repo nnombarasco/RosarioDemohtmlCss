@@ -256,7 +256,7 @@ li{
     #cinesYteatros{
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows:100px 1700px 1700px 1700px 1700px 1700px 1700px 1700px 1700px 1700px 1700px 1700px 100px;
+        grid-template-rows:100px 1700px 1700px 1700px 1700px 1700px 1700px 1700px 1850px 1850px 1850px 1850px 100px;
         grid-template-areas: "titleCine" 
                             "cine1"
                             "cine2"
@@ -366,7 +366,7 @@ li{
     #cinesYteatros{
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows:100px 1000px 1000px 1000px 1000px 1000px 1000px 1000px 1300px 1300px 1300px 1300px 100px;
+        grid-template-rows:100px 1000px 1000px 1000px 1000px 1000px 1000px 1000px 700px 700px 700px 700px 100px;
         grid-template-areas:"titleCine" 
                             "cine1"
                             "cine2"

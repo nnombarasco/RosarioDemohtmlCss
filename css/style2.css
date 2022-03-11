@@ -192,7 +192,7 @@ li {
   #cinesYteatros {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 100px 1700px 1700px 1700px 1700px 1700px 1700px 1700px 1700px 1700px 1700px 1700px 100px;
+    grid-template-rows: 100px 1700px 1700px 1700px 1700px 1700px 1700px 1700px 1850px 1850px 1850px 1850px 100px;
     grid-template-areas: "titleCine"  "cine1" "cine2" "cine3" "cine4" "cine5" "cine6" "cine7" "teatro1" "teatro2" "teatro3" "teatro4" "footerCyT";
     row-gap: 10px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -259,7 +259,7 @@ li {
   #cinesYteatros {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 100px 1000px 1000px 1000px 1000px 1000px 1000px 1000px 1300px 1300px 1300px 1300px 100px;
+    grid-template-rows: 100px 1000px 1000px 1000px 1000px 1000px 1000px 1000px 700px 700px 700px 700px 100px;
     grid-template-areas: "titleCine"  "cine1" "cine2" "cine3" "cine4" "cine5" "cine6" "cine7" "teatro1" "teatro2" "teatro3" "teatro4" "footerCyT";
     justify-items: center;
     align-items: center;
