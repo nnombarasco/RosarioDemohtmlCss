@@ -591,6 +591,20 @@ li{
         background: rgb(201, 201, 201);
     }
 
+    .cine{
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+        flex-direction: row;
+
+        img{
+        width: 30%;
+        height: 100%;
+        margin: 20px;
+        }
+    }
+
     /*parques*/
 
     #parquesGrid{
@@ -761,7 +775,7 @@ li{
     #cinesYteatros{
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows:100px 900px 900px 900px 900px 900px 900px 900px 900px 900px 900px 900px 100px;
+        grid-template-rows:100px 900px 900px 900px 900px 900px 900px 900px 700px 700px 700px 700px 100px;
         grid-template-areas:"titleCine" 
                             "cine1"
                             "cine2"
