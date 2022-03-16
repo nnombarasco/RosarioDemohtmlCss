@@ -8,6 +8,10 @@ $fontSizeFooter: 10px;
 $fontSizeTitle: 6vw;
 $fondoCinesOTeatros: linear-gradient(to bottom, rgb(201, 201, 201), rgb(63, 62, 63));
 
+@mixin tamanioContenedor($ancho,$largo) {
+    width: $ancho;
+    height: $largo;
+}
 
 body{
     margin: 0px;
@@ -122,6 +126,22 @@ li{
 #tituloParques{
     grid-area: tituloParques;
     font-size: $fontSizeTitle;
+}
+
+#pIndependencia{
+    grid-area: pIndependencia;
+}
+
+#pUrquiza{
+    grid-area: pUrquiza;
+}
+
+#pEspania{
+    grid-area: pEspania;
+}
+
+#pAlem{
+    grid-area: pAlem;
 }
 
 #m1{
@@ -331,6 +351,48 @@ li{
         height: 200px !important;
         width: 300px !important;
     }
+
+               /*parques*/
+
+               #parquesGrid{
+                display: grid !important;
+                grid-template-columns: 100% !important;
+                grid-template-rows: 150px 430px 430px 430px 430px 100px !important;
+                grid-template-areas:    "tituloParques"
+                                        "pIndependencia"
+                                        "pUrquiza"
+                                        "pEspania"
+                                        "pAlem"
+                                        "footerParques" !important;
+                justify-items: center;
+                align-items: center;
+                justify-content: space-between;
+                row-gap: 10px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-weight: bold;
+                font-size: 15px;
+                background: rgb(201, 201, 201)!important;
+            
+                    .parque{
+                        display: flex;
+                        @include tamanioContenedor(100%, 100%);
+                        flex-direction: column;
+                        align-items: center;
+
+                        p{
+                            text-align: center;
+                        }
+
+                        img{
+                            width: 90%;
+                            padding-bottom: 10px;
+                        }
+
+                        iframe{
+                            @include tamanioContenedor(90%, auto);
+                        }
+                    }
+                }
 }
 
 /*pantallas medias*/
@@ -450,6 +512,49 @@ li{
         height: 300px !important;
         width: 400px !important;
     }
+
+    /*parques*/
+
+    #parquesGrid{
+        display: grid !important;
+        grid-template-columns: 100% !important;
+        grid-template-rows: 150px 550px 550px 550px 550px 100px !important;
+        grid-template-areas:    "tituloParques"
+                                "pIndependencia"
+                                "pUrquiza"
+                                "pEspania"
+                                "pAlem"
+                                "footerParques" !important;
+        justify-items: center;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        background: rgb(201, 201, 201)!important;
+    
+            .parque{
+                display: flex;
+                @include tamanioContenedor(100%, 100%);
+                flex-direction: column;
+                align-items: center;
+
+                p{
+                    text-align: center;
+                }
+
+                img{
+                    width: 90%;
+                    padding-bottom: 10px;
+                }
+
+                iframe{
+                    @include tamanioContenedor(90%, 600px);
+                    padding-bottom: 10px;
+                }
+            }
+        }
 }
 
 /*tamanio medias-grandes*/
@@ -485,6 +590,49 @@ li{
         font-size: 40px;
         background: rgb(201, 201, 201);
     }
+
+    /*parques*/
+
+    #parquesGrid{
+        display: grid !important;
+        grid-template-columns: 100% !important;
+        grid-template-rows: 150px 550px 550px 550px 550px 100px !important;
+        grid-template-areas:    "tituloParques"
+                                "pIndependencia"
+                                "pUrquiza"
+                                "pEspania"
+                                "pAlem"
+                                "footerParques" !important;
+        justify-items: center;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+        background: rgb(201, 201, 201)!important;
+    
+            .parque{
+                display: flex;
+                @include tamanioContenedor(100%, 100%);
+                flex-direction: column;
+                align-items: center;
+
+                p{
+                    text-align: center;
+                }
+
+                img{
+                    width: 90%;
+                    padding-bottom: 10px;
+                }
+
+                iframe{
+                    @include tamanioContenedor(90%, 600px);
+                    padding-bottom: 10px;
+                }
+            }
+        }
 }
 
 @media only screen and ( min-width:600px){
@@ -556,6 +704,43 @@ li{
         align-items: center;
         justify-content: space-around;
     }
+
+           /*parques*/
+
+           #parquesGrid{
+            display: grid !important;
+            grid-template-columns: 100% !important;
+            grid-template-rows: 150px 300px 300px 300px 300px 100px !important;
+            grid-template-areas:    "tituloParques"
+                                    "pIndependencia"
+                                    "pUrquiza"
+                                    "pEspania"
+                                    "pAlem"
+                                    "footerParques" !important;
+            justify-items: center;
+            align-items: center;
+            justify-content: space-between;
+            row-gap: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            background: rgb(201, 201, 201)!important;
+        
+            .parque{
+                display: block;
+                p{
+                    text-align: center;
+                }
+                img{
+                    margin: 0px 50px;
+                    width: 50%;
+                    float: left;
+                }
+                iframe{
+                    @include tamanioContenedor(30%, 191px);
+                }
+            }
+        }
 }
 
 @media only screen and ( min-width:700px){
@@ -642,6 +827,42 @@ li{
         height: 500px !important;
         width: 600px !important;
     }
+
+        /*parques*/
+
+        #parquesGrid{
+            display: grid !important;
+            grid-template-columns: 100% !important;
+            grid-template-rows: 150px 400px 400px 400px 400px 100px !important;
+            grid-template-areas:    "tituloParques"
+                                    "pIndependencia"
+                                    "pUrquiza"
+                                    "pEspania"
+                                    "pAlem"
+                                    "footerParques" !important;
+            justify-items: center;
+            align-items: center;
+            justify-content: space-between;
+            row-gap: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            font-size: 40px;
+            background: rgb(201, 201, 201)!important;
+        
+            .parque{
+                p{
+                    text-align: center;
+                }
+                img{
+                    margin: 0px 50px;
+                    width: 47%;
+                    float: left;
+                }
+                iframe{
+                    @include tamanioContenedor(30%, 250px);
+                }
+            }
+        }
 }
 
 /*pantallas grandes*/
@@ -650,10 +871,7 @@ li{
 
     /*home page*/
 
-    @mixin tamanioContenedor($ancho,$largo) {
-        width: $ancho;
-        height: $largo;
-    }
+    
 
     #gridHomePage {
         display: grid;   
@@ -788,16 +1006,35 @@ li{
     #parquesGrid{
         display: grid !important;
         grid-template-columns: 100% !important;
-        grid-template-rows: 150px 900px 100px !important;
+        grid-template-rows: 150px 650px 650px 650px 650px 100px !important;
         grid-template-areas:    "tituloParques"
-                                "Parques"
+                                "pIndependencia"
+                                "pUrquiza"
+                                "pEspania"
+                                "pAlem"
                                 "footerParques" !important;
-                                
-        justify-items: center !important;
-        align-items: center !important;
-        justify-content: space-between!important;
-        font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+        justify-items: center;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        font-size: 40px;
         background: rgb(201, 201, 201)!important;
+    
+        .parque{
+            p{
+                text-align: center;
+            }
+            img{
+                margin: 0px 50px;
+                width: 45%;
+                float: left;
+            }
+            iframe{
+                @include tamanioContenedor(40%, 500px);
+            }
+        }
     }
 }
 
@@ -809,6 +1046,7 @@ li{
     transform: scale(1.05, 1.05);
     transition: .5s;
 }
+
 @keyframes animacionZoom{
 
 }
