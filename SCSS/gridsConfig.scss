@@ -1,0 +1,112 @@
+@import 'varAndMixin.scss';
+
+
+#titleHome{ 
+    grid-area: h;
+}
+
+#titleHome h1{ 
+    font-size: $fontSizeTitle;
+}
+
+#tituloGaleria{
+    grid-area: tituloGaleria;
+    font-size: $fontSizeTitle;
+}
+
+#tituloParques{
+    grid-area: tituloParques;
+    font-size: $fontSizeTitle;
+}
+
+#pIndependencia{
+    grid-area: pIndependencia;
+}
+
+#pUrquiza{
+    grid-area: pUrquiza;
+}
+
+#pEspania{
+    grid-area: pEspania;
+}
+
+#pAlem{
+    grid-area: pAlem;
+}
+
+#m1{
+    @extend .contIndex;
+    grid-area: m1;
+}    
+
+#m2{
+    @extend .contIndex;
+    grid-area: m2;
+}
+
+#m3{
+    @extend .contIndex;
+    grid-area: m3;
+}
+
+#cine1{
+    grid-area: cine1;
+    background: $fondoCinesOTeatros;
+}
+
+#cine2{
+    grid-area: cine2;
+    background: $fondoCinesOTeatros;
+}
+
+#cine3{
+    grid-area: cine3;
+    background: $fondoCinesOTeatros;
+}
+
+#cine4{
+    grid-area: cine4;
+    background: $fondoCinesOTeatros;
+}
+
+#cine5{
+    grid-area: cine5;
+    background: $fondoCinesOTeatros;
+}
+
+#cine6{
+    grid-area: cine6;
+    background: $fondoCinesOTeatros;
+}
+
+#cine7{
+    grid-area: cine7;
+    background: $fondoCinesOTeatros;
+}
+
+#teatro1{
+    grid-area: teatro1;
+    background: $fondoCinesOTeatros;
+}
+
+#teatro2{
+    grid-area: teatro2;
+    background: $fondoCinesOTeatros;
+}
+
+#teatro3{
+    grid-area: teatro3;
+    background: $fondoCinesOTeatros;
+}
+
+#teatro4{
+    grid-area: teatro4;
+    background: $fondoCinesOTeatros;
+}
+
+#galeria{
+    grid-area: Galeria !important;
+    width: 800px;
+    height: 100%;
+}

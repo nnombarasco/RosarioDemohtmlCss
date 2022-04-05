@@ -1,0 +1,1078 @@
+@import 'navBar.scss';
+@import 'varAndMixin.scss';
+
+/*moviles*/
+
+@media screen and (max-width: 440px) {
+
+    .propiedadesGrid{
+        justify-items: center;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    /*home page*/
+    #gridHomePage {
+        display: grid;   
+        grid-template-columns: 100%;
+        grid-template-rows: 100px 700px 700px 700px 100px;
+        grid-template-areas: "h" "m1" "m2" "m3" "f";
+        @extend .propiedadesGrid;
+    }
+
+    header{
+        height: auto;
+    }
+
+    ul{
+        flex-direction: column;
+    }
+
+    li{
+        float: none;
+    }
+
+    li:hover{
+        background-color: $colorFondoNavegadorHover;
+
+        a{
+            color: white;
+        }
+    }
+
+    /*cine y teatros*/
+    
+    #cinesYteatros{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows:100px 1700px 1700px 1700px 1700px 1700px 1700px 1700px 1850px 1850px 1850px 1850px 100px;
+        grid-template-areas: "titleCine" 
+                            "cine1"
+                            "cine2"
+                            "cine3"
+                            "cine4"
+                            "cine5"
+                            "cine6"
+                            "cine7"
+                            "teatro1"
+                            "teatro2"
+                            "teatro3"
+                            "teatro4"
+                            "footerCyT";
+        row-gap: 10px;
+        font-family: $fontFamilyAll !important;
+        font-weight: bold;
+        text-align: center;
+        font-size: 40px;
+        background: rgb(201, 201, 201);
+        @extend .propiedadesGrid;
+
+        .cine{
+            display: flex;
+            height: 100%;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+
+            img{
+            width: 80%;
+            height: 100%;
+            padding-bottom: 10px;
+            }
+        }        
+    }
+
+    /*contacto*/
+
+    #contactoGrid{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100px 300px 100px;
+        grid-template-areas:    "titloContacto"
+                                "formulario"
+                                "footerContacto";
+        @extend .propiedadesGrid;
+    }
+
+    /*galeria*/
+
+    #galeriaGrid{
+        display: flex;
+        flex-direction: column;
+        justify-items: center !important;
+        align-items: center !important;
+        justify-content: space-between!important;
+        font-family: $fontFamilyAll !important;
+        background: rgb(201, 201, 201)!important;
+
+            #galeria{
+            grid-area: Galeria !important;
+            width: 300px;
+            height: 500px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+
+                .w-100{
+                height: 200px !important;
+                width: 300px !important;
+                }
+            }
+    }
+
+    /*parques*/
+
+    #parquesGrid{
+    display: grid !important;
+    grid-template-columns: 100% !important;
+    grid-template-rows: 150px 1300px 1000px 1000px 1000px !important;
+    grid-template-areas:    "tituloParques"
+                            "pIndependencia"
+                            "pUrquiza"
+                            "pEspania"
+                            "pAlem" !important;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 10px;
+    font-family: $fontFamilyAll;
+    font-weight: bold;
+    font-size: 15px;
+    background: $colorFondoMain !important;
+
+    .parque{
+        text-align: center;
+        p{
+            text-align: center;
+        }
+        img{
+            width: 95%;
+            float: none;
+            margin-bottom: 10px;
+        }
+        iframe{
+            width: 95%;
+            height: 20vh;
+            margin-top: 10px;
+        }
+
+        .texto{
+            margin: 0 auto;
+            font-size: 10px;
+            width: 80%;
+            float: none;
+            text-align: justify;
+
+            
+            ul{
+                background-color: $colorFondoMain;
+                list-style-type: disc !important;
+            }
+
+            li{
+                list-style-type: disc;
+
+                background-color: $colorFondoMain;
+                color: black; 
+            }
+        }            
+        }
+    }
+}
+
+/*pantallas medias*/
+
+@media only screen and ( min-width:441px) and ( max-width:576px){
+
+    header{
+        height: auto;
+    }
+
+    ul{
+        flex-direction: column;
+    }
+
+    li{
+        float: none;
+    }
+
+    li:hover{
+        background-color: $colorFondoNavegadorHover;
+
+        a{
+            color: white;
+        }
+    }
+
+    /*home page*/
+
+    #gridHomePage{
+        display: grid;
+        grid-template-columns: 100% ;
+        grid-template-rows: 100px 900px 900px 900px;
+        grid-template-areas: "h" "m1" "m2" "m3";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-around;
+        row-gap: 10px;
+
+        img{
+            width: 80%;
+        }
+
+        p{
+            margin: 30px 40px;
+            font-size: 16px;
+            text-align: justify;
+        }
+    }
+
+    /*cine y teatros*/
+
+    #cinesYteatros{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows:100px 850px 850px 850px 850px 850px 850px 850px 700px 700px 700px 700px 100px;
+        grid-template-areas:"titleCine" 
+                            "cine1"
+                            "cine2"
+                            "cine3"
+                            "cine4"
+                            "cine5"
+                            "cine6"
+                            "cine7"
+                            "teatro1"
+                            "teatro2"
+                            "teatro3"
+                            "teatro4"
+                            "footerCyT";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 10px;
+        font-family: $fontFamilyAll;
+        font-weight: bold;
+        text-align: center;
+        font-size: 40px;
+        background: $colorFondoMain;
+
+        #tituloCineYTeatros{
+        grid-area: titleCine;
+        }
+
+        .cine{
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+            flex-direction: row;
+
+            img{
+            width: 30%;
+            height: 100%;
+            margin: 20px;
+            }
+        }        
+    }
+
+    /*contacto*/
+
+    #contactoGrid{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100px 450px 100px;
+        grid-template-areas:    "titloContacto"
+                                "formulario"
+                                "footerContacto";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    /*galeria*/
+
+    #galeriaGrid{
+        display: grid !important;
+        grid-template-columns: 100% !important;
+        grid-template-rows: 150px 700px 100px !important;
+        grid-template-areas:    "tituloGaleria"
+                                "Galeria"
+                                "footerGaleria" !important;
+                                
+        justify-items: center !important;
+        align-items: center !important;
+        justify-content: space-between!important;
+        font-family: $fontFamilyAll !important;
+        background: $colorFondoMain!important;
+    }
+
+    #galeria{
+        grid-area: Galeria !important;
+        width: 400px;
+        height: 100%;
+    }
+    
+    .w-100{
+        height: 300px !important;
+        width: 400px !important;
+    }
+
+
+
+    /*parques*/
+
+    #parquesGrid{
+        display: grid !important;
+        grid-template-columns: 100% !important;
+        grid-template-rows: 150px 1200px 900px 900px 1000px !important;
+        grid-template-areas:    "tituloParques"
+                                "pIndependencia"
+                                "pUrquiza"
+                                "pEspania"
+                                "pAlem" !important;
+        justify-items: center;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 10px;
+        font-family: $fontFamilyAll;
+        font-weight: bold;
+        font-size: 15px;
+        background: $colorFondoMain !important;
+    
+        .parque{
+            text-align: center;
+            p{
+                text-align: center;
+            }
+            img{
+                width: 95%;
+                float: none;
+                margin-bottom: 10px;
+            }
+            iframe{
+                width: 95%;
+                height: 20vh;
+                margin-top: 10px;
+            }
+
+            .texto{
+                margin: 0 auto;
+                font-size: 10px;
+                width: 80%;
+                float: none;
+                text-align: justify;
+
+                
+                ul{
+                    background-color: $colorFondoMain;
+                    list-style-type: disc !important;
+                }
+
+                li{
+                    list-style-type: disc;
+
+                    background-color: $colorFondoMain;
+                    color: black; 
+                }
+            }            
+            }
+        }
+}
+
+/*tamanio medias-grandes*/
+
+@media only screen and ( min-width:500px){
+
+    li:hover{
+        background-color: $colorFondoNavegadorHover;
+
+        a{
+            color: white;
+        }
+    }
+
+    /*home*/
+
+    #gridHomePage{
+        display: grid;
+        grid-template-columns: 100% ;
+        grid-template-rows: 100px 800px 800px 800px;
+        grid-template-areas: "h" "m1" "m2" "m3";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-around;
+        row-gap: 10px;
+
+        img{
+            width: 60%;
+        }
+
+        p{
+            margin: 30px 40px;
+            font-size: 16px;
+            text-align: justify;
+        }
+    }
+
+    /*cine y teatros*/
+
+    #cinesYteatros{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows:100px 900px 900px 900px 900px 900px 900px 900px 900px 900px 900px 900px 100px;
+        grid-template-areas:"titleCine" 
+                            "cine1"
+                            "cine2"
+                            "cine3"
+                            "cine4"
+                            "cine5"
+                            "cine6"
+                            "cine7"
+                            "teatro1"
+                            "teatro2"
+                            "teatro3"
+                            "teatro4"
+                            "footerCyT";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 10px;
+        font-family: $fontFamilyAll;
+        font-weight: bold;
+        text-align: center;
+        font-size: 40px;
+        background: $colorFondoMain;
+
+        .cine{
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+            flex-direction: row;
+
+            img{
+            width: 30%;
+            height: 100%;
+            margin: 20px;
+            }
+        }        
+    }
+
+    /*parques*/
+
+    #parquesGrid{
+        display: grid !important;
+        grid-template-columns: 100% !important;
+        grid-template-rows: 150px 1200px 550px 550px 550px !important;
+        grid-template-areas:    "tituloParques"
+                                "pIndependencia"
+                                "pUrquiza"
+                                "pEspania"
+                                "pAlem" !important;
+        justify-items: center;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 10px;
+        font-family: $fontFamilyAll;
+        font-weight: bold;
+        font-size: 15px;
+        background: $colorFondoMain !important;
+    
+        .parque{
+            
+            p{
+                text-align: center;
+            }
+            img{
+                width: 80%;
+                float: none;
+                margin: 10px 25px;
+            }
+            iframe{
+                width: 50%;
+                float: none;
+                margin: 10px 25px;
+            }
+
+            .texto{
+                margin: 7px 20px; 
+                font-size: 10px;
+                width: 80%;
+                float: none;
+                text-align: justify;
+
+                
+                ul{
+                    background-color: $colorFondoMain;
+                    list-style-type: disc !important;
+                }
+
+                li{
+                    list-style-type: disc;
+
+                    background-color: $colorFondoMain;
+                    color: black; 
+                }
+            }            
+            }
+        }
+
+        /*galeria*/
+
+        #galeriaGrid{
+            display: grid !important;
+            grid-template-columns: 100% !important;
+            grid-template-rows: 150px 1100px 100px !important;
+            grid-template-areas:    "tituloGaleria"
+                                    "Galeria"
+                                    "footerGaleria" !important;
+                                    
+            justify-items: center !important;
+            align-items: center !important;
+            justify-content: space-between!important;
+            font-family: $fontFamilyAll !important;
+            background: $colorFondoMain !important;
+    
+                #galeria{
+                grid-area: Galeria !important;
+                @include tamanioContenedor(80%, 100%);
+                justify-items: center;
+                
+                    .w-100{
+                        
+                        height: 300px !important;
+                        width: 100% !important;
+                    }
+                }
+        }   
+        
+}
+
+@media only screen and ( min-width:600px){
+    /*home page*/
+
+    #gridHomePage{
+        display: grid;
+        grid-template-columns: 100% ;
+        grid-template-rows: 100px 720px 720px 720px;
+        grid-template-areas: "h" "m1" "m2" "m3";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-around;
+        row-gap: 10px;
+
+        img{
+            width: 50%;
+        }
+
+        p{
+            margin: 30px 40px;
+            font-size: 16px;
+            text-align: justify;
+        }
+    }
+
+    /*cine y teatros*/
+
+    #cinesYteatros{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows:100px 1100px 1100px 1100px 1100px 1100px 1100px 1100px 900px 900px 900px 900px 100px;
+        grid-template-areas:"titleCine" 
+                            "cine1"
+                            "cine2"
+                            "cine3"
+                            "cine4"
+                            "cine5"
+                            "cine6"
+                            "cine7"
+                            "teatro1"
+                            "teatro2"
+                            "teatro3"
+                            "teatro4"
+                            "footerCyT";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 10px;
+        font-family: $fontFamilyAll;
+        font-weight: bold;
+        text-align: center;
+        font-size: 40px;
+        background: $colorFondoMain;
+
+        .cine{
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+            flex-direction: row;
+
+            img{
+            width: 30%;
+            height: 60%;
+            margin: 20px;
+            }
+        }        
+    }
+
+    #contactoGrid{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100px 450px 100px;
+        grid-template-areas:    "titloContacto"
+                                "formulario"
+                                "footerContacto";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+           /*parques*/
+
+           #parquesGrid{
+            display: grid !important;
+            grid-template-columns: 100% !important;
+            grid-template-rows: 150px 1200px 1000px 1000px 1000px !important;
+            grid-template-areas:    "tituloParques"
+                                    "pIndependencia"
+                                    "pUrquiza"
+                                    "pEspania"
+                                    "pAlem" !important;
+            justify-items: center;
+            align-items: center;
+            justify-content: space-between;
+            row-gap: 10px;
+            font-family: $fontFamilyAll;
+            font-weight: bold;
+            font-size: 20px;
+            background: $colorFondoMain !important;
+        
+            .parque{
+                text-align: center;
+                p{
+                    text-align: center;
+                }
+                img{
+                    width: 90%;
+                    float: none;
+                    margin: 10px 25px;
+                }
+                iframe{
+                    width: 90%;
+                    height: 21vh;
+                    float: none;
+                    margin: 10px 25px;
+                }
+    
+                .texto{
+                    margin: 7px 20px; 
+                    font-size: 10px;
+                    width: 90%;
+                    float: none;
+                    text-align: justify;
+    
+                    
+                    ul{
+                        background-color: $colorFondoMain;
+                        list-style-type: disc !important;
+                    }
+    
+                    li{
+                        list-style-type: disc;
+    
+                        background-color: $colorFondoMain;
+                        color: black; 
+                    }
+                }            
+            }
+        }
+
+        /*galeria*/
+
+        #galeriaGrid{
+            display: grid !important;
+            grid-template-columns: 100% !important;
+            grid-template-rows: 150px 1100px 100px !important;
+            grid-template-areas:    "tituloGaleria"
+                                    "Galeria"
+                                    "footerGaleria" !important;
+                                    
+            justify-items: center !important;
+            align-items: center !important;
+            justify-content: space-between!important;
+            font-family: $fontFamilyAll !important;
+            background: $colorFondoMain !important;
+    
+                #galeria{
+                grid-area: Galeria !important;
+                @include tamanioContenedor(80%, 100%);
+                justify-items: center;
+                
+                    .w-100{
+                        
+                        height: 300px !important;
+                        width: 100% !important;
+                    }
+                }
+        }   
+}
+
+@media only screen and ( min-width:700px){
+
+    /*home page*/
+
+    #gridHomePage{
+        display: grid;
+        grid-template-columns: 100% ;
+        grid-template-rows: 100px 850px 850px 850px;
+        grid-template-areas: "h" "m1" "m2" "m3";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-around;
+        row-gap: 10px;
+
+        img{
+            width: 40%;
+        }
+
+        p{
+            margin: 30px 40px;
+            font-size: 16px;
+            text-align: justify;
+        }
+    }
+    
+
+    /*cine y teatros*/
+
+    #cinesYteatros{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows:100px 900px 900px 900px 900px 900px 900px 900px 700px 700px 700px 700px 100px;
+        grid-template-areas:"titleCine" 
+                            "cine1"
+                            "cine2"
+                            "cine3"
+                            "cine4"
+                            "cine5"
+                            "cine6"
+                            "cine7"
+                            "teatro1"
+                            "teatro2"
+                            "teatro3"
+                            "teatro4"
+                            "footerCyT";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 10px;
+        font-family: $fontFamilyAll;
+        font-weight: bold;
+        text-align: center;
+        font-size: 40px;
+        background: $colorFondoMain;
+
+        .cine{
+            display: flex;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 100%;
+            flex-direction: row;
+
+            img{
+            width: 25%;
+            height: 50%;
+            margin: 20px;
+            }
+        }        
+    }
+
+
+
+    /*galeria*/
+
+    #galeriaGrid{
+        display: grid !important;
+        grid-template-columns: 100% !important;
+        grid-template-rows: 150px 1000px 100px !important;
+        grid-template-areas:    "tituloGaleria"
+                                "Galeria"
+                                "footerGaleria" !important;
+                                
+        justify-items: center !important;
+        align-items: center !important;
+        justify-content: space-between!important;
+        font-family: $fontFamilyAll !important;
+        background: $colorFondoMain!important;
+
+            #galeria{
+            grid-area: Galeria !important;
+            @include tamanioContenedor(80%, 100%);
+            justify-items: center;
+            
+                .w-100{
+                    
+                    height: 450px !important;
+                    width: 100% !important;
+                }
+            }
+    }   
+    
+        /*parques*/
+
+        #parquesGrid{
+            display: grid !important;
+            grid-template-columns: 100% !important;
+            grid-template-rows: 150px 1100px 700px 700px 700px !important;
+            grid-template-areas:    "tituloParques"
+                                    "pIndependencia"
+                                    "pUrquiza"
+                                    "pEspania"
+                                    "pAlem" !important;
+            justify-items: center;
+            align-items: center;
+            justify-content: space-between;
+            row-gap: 10px;
+            font-family: $fontFamilyAll;
+            font-weight: bold;
+            font-size: 40px;
+            background: $colorFondoMain !important;
+        
+            .parque{
+            display: block;
+                p{
+                    text-align: center;
+                }
+                img{
+                    width: 47%;
+                }
+                iframe{
+                    @include tamanioContenedor(47%, 30vh);
+                }
+    
+                .texto{
+                    font-size: 10px;
+                    width: 35%;
+                    float: right;
+                    text-align: justify;
+    
+                    
+                    ul{
+                        background-color: $colorFondoMain;
+                        list-style-type: disc !important;
+                    }
+    
+                    li{
+                        list-style-type: disc;
+    
+                        background-color: $colorFondoMain;
+                        color: black; 
+                    }
+                }            
+            }
+        }
+}
+
+/*pantallas grandes*/
+
+@media only screen and ( min-width: 992px){
+
+    /*home page*/
+
+    #gridHomePage {
+        display: grid;   
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 150px 1150px;
+        grid-template-areas: "h h h" "m1 m2 m3";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-evenly;
+        
+
+        img{
+            width: 80%;
+        }
+
+        p{
+            margin: 30px 40px;
+            font-size: 16px;
+            text-align: justify;
+        }
+    }
+
+    /*pagina cine y teatros*/
+
+    #cinesYteatros{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows:150px 600px 600px 600px 600px 600px 600px 600px 550px 550px 550px 550px 100px;
+        grid-template-areas:"titleCine" 
+                            "cine1"
+                            "cine2"
+                            "cine3"
+                            "cine4"
+                            "cine5"
+                            "cine6"
+                            "cine7"
+                            "teatro1"
+                            "teatro2"
+                            "teatro3"
+                            "teatro4"
+                            "footerCyT";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 10px;
+        font-family: $fontFamilyAll;
+        font-size: 40px;
+        background: $colorFondoMain;
+
+        #tituloCineYTeatros{
+        grid-area: titleCine;
+        font-size: 6vw;
+        }
+
+        .cine{
+            @include tamanioContenedor(100%, 100%);
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            padding-bottom: 30px;
+
+            img{
+            @include tamanioContenedor(14%, 50%);
+            margin: 20px;
+            }
+        }
+    }
+
+    #contactoGrid{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 100px 700px 100px;
+        grid-template-areas:    "titloContacto"
+                                "formulario"
+                                "footerContacto";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #galeriaGrid{
+        display: grid !important;
+        grid-template-columns: 100% !important;
+        grid-template-rows: 150px 1100px 100px !important;
+        grid-template-areas:    "tituloGaleria"
+                                "Galeria"
+                                "footerGaleria" !important;
+                                
+        justify-items: center !important;
+        align-items: center !important;
+        justify-content: space-between!important;
+        font-family: $fontFamilyAll !important;
+        background: $colorFondoMain!important;
+
+            #galeria{
+            grid-area: Galeria !important;
+            @include tamanioContenedor(800px, 100%);
+            
+                .w-100{
+                    height: 550px !important;
+                    width: 800px !important;
+                }
+            }
+    }
+
+    nav{
+        ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: $colorFondoNavegador;
+        flex-direction: row;
+        width: 100%;
+        }
+
+        li{
+            float: left;
+
+            a {
+            display: block;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: $fontFamilyAll;
+            }
+
+            a:hover {
+            background-color: $colorFondoNavegadorHover;
+            color: white;
+            }
+        }
+    }
+    
+
+    /*parques*/
+
+    #parquesGrid{
+        display: grid !important;
+        grid-template-columns: 100% !important;
+        grid-template-rows: 150px 950px 950px 950px 950px !important;
+        grid-template-areas:    "tituloParques"
+                                "pIndependencia"
+                                "pUrquiza"
+                                "pEspania"
+                                "pAlem";
+        justify-items: center;
+        align-items: center;
+        justify-content: space-between;
+        row-gap: 10px;
+        font-family: $fontFamilyAll;
+        font-weight: bold;
+        font-size: 40px;
+        background: $colorFondoMain !important;
+    
+        .parque{
+            display: block;
+            p{
+                text-align: center;
+            }
+            img{
+                width: 50%;
+                float: none;
+                margin: 10px 25px;
+            }
+            iframe{
+                width: 50%;
+                height: 25vh !important;
+                float: none;
+                margin: 10px 25px;
+            }
+
+            .texto{
+                margin: 7px 20px; 
+                font-size: 12px;
+                width: 40%;
+                float: right;
+                text-align: justify;
+
+                
+                ul{
+                    background-color: $colorFondoMain;
+                    list-style-type: disc !important;
+                }
+
+                li{
+                    list-style-type: disc;
+
+                    background-color: $colorFondoMain;
+                    color: black; 
+                }
+            }
+        }
+    }
+}

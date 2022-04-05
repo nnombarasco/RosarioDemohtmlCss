@@ -1,0 +1,14 @@
+.ZoomImg{
+    transform: scale(1, 1);
+    transition: .5s;
+    align-self: center;
+}
+.ZoomImg:hover{
+    transform: scale(1.05, 1.05);
+    transition: .5s;
+    align-self: center;
+}
+
+@keyframes animacionZoom{
+
+}

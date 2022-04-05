@@ -1,0 +1,52 @@
+@import 'varAndMixin.scss';
+
+nav{
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $colorFondoNavegador;
+    flex-direction: row;
+    width: 100%;
+}
+
+li{
+    float: left;
+    a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: $fontFamilyAll;
+    }
+    li a:hover {
+    background-color: $colorFondoNavegadorHover;
+    color: white;
+    }
+}
+
+
+.navbar-collapse{
+    z-index: 100;
+}
+
+.container-fluid{
+    padding: 0px 0px;
+    background-color: $colorFondoNavegador;
+    height: 52px;
+
+    button{
+    padding: 0%;
+    background-color: silver;
+    height: 42px;
+    width: 55px;
+    }
+}
+
+}
+.navbar{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}

@@ -1,0 +1,19 @@
+$fontSizeFooter: 10px;
+$colorFondoMain: #D8D2CB;
+$colorFondoNavegador: #1c658c;
+$colorFondoNavegadorHover: #398AB9;
+$fontSizeTitle: 6vw;
+$fontFamilyAll: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+$fondoCinesOTeatros: linear-gradient(to bottom, #D8D2CB, rgb(63, 62, 63));
+
+@mixin tamanioContenedor($ancho,$largo) {
+    width: $ancho;
+    height: $largo;
+}
+
+.contIndex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+}
